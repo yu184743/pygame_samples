@@ -10,7 +10,7 @@ pygame.display.set_caption("pygame demo - window title here")
 running = True
 x1, y1 = 0, 2
 
-# infinit loop top ----
+# infinite loop top ----
 while running:
     # press ctrl-c to stop
     for event in pygame.event.get():
@@ -20,6 +20,7 @@ while running:
     screen.fill((238, 238, 170))  # back ground color
 
     pygame.draw.circle(screen, (176, 176, 222), (320, 240), 120)
+    pygame.draw.circle(screen, (222, 176, 222), (120, 120), 20)
     pygame.draw.circle(screen, (222, 176, 222), (120, 120), 20)
     pygame.draw.rect(screen, (120, 120, 120), Rect(120, 120, 200, 120))
 
@@ -38,6 +39,6 @@ while running:
 
     pygame.display.flip()  # update
     clock.tick(5)  # FPS, Frame Per Second
-# infinit loop bottom ----
+# infinite loop bottom ----
 
 pygame.quit()
