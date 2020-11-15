@@ -12,7 +12,7 @@ from pygame.locals import Rect
 # 7セグの配置  pygameの場合、y軸反転が必要
 # 各ブロック、左下原点*(0,0)からのオフセット(x,y)
 # y:
-# 6     A A       A0(1,6)  A1(2.6)
+# 6     A A       A0(1,6)  A1(2,6)
 # 5   F     B     F1(0,5)  B1(3,5)
 # 4   F     B     F0(0,4)  B0(3,4)
 # 3     G G       G0(1,3)  G1(2,3)
@@ -89,14 +89,12 @@ class Seven_seg():
             if blank is True:    # ブランク表示の場合は、すべてOFFで上書き
                 color = self.COLOR_OFF
             # 桁の原点
-            # if col < 0:
-            #     col = 0
             x0 = self.X_ORG + self.COL_INTV * col
             y0 = self.Y_ORG
             # ブロック1、ブロック2の座標オフセット
             x1, y1 = segment[16][0]
             x2, y2 = segment[16][1]
-            # ブロック1、ブロック2の座標
+            # ブロック1、ブロック2の原点座標
             org1 = (x0 + x1 * self.BLOCK_INTV, y0 - y1 * self.BLOCK_INTV)
             org2 = (x0 + x2 * self.BLOCK_INTV, y0 - y2 * self.BLOCK_INTV)
             # ブロック１，２を描く
