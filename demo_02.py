@@ -2,7 +2,6 @@
 # using the class 'Seven_seg' in seven_seg_pg.py
 
 import pygame
-from pygame.locals import Rect
 from seven_seg_pg import Seven_seg
 
 
