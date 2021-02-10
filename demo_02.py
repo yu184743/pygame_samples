@@ -21,11 +21,11 @@ pygame.display.set_caption("pygame 7-segment display simulation")
 screen.fill(DARK_GRAY)
 
 display1 = Seven_seg(screen)
-display1.init_col(BLOCK_SIZE=6, BLOCK_INTV=8, COLOR_ON=GREEN, COLOR_OFF=GRAY)
+display1.init_col(BLOCK_SIZE=7, BLOCK_INTV=8, COLOR_ON=GREEN, COLOR_OFF=GRAY)
 display1.init_row(X_ORG=8, Y_ORG=8, COL_INTV=6)
 
 display2 = Seven_seg(screen)
-display2.init_col(BLOCK_SIZE=6, BLOCK_INTV=8, COLOR_ON=CYAN, COLOR_OFF=GRAY)
+display2.init_col(BLOCK_SIZE=8, BLOCK_INTV=8, COLOR_ON=CYAN, COLOR_OFF=GRAY)
 display2.init_row(X_ORG=2, Y_ORG=16, COL_INTV=6)
 
 display3 = Seven_seg(screen)
@@ -33,7 +33,7 @@ display3.init_col()
 display3.init_row(X_ORG=20, Y_ORG=60, COL_INTV=6)
 
 display4 = Seven_seg(screen)
-display4.init_col()
+display4.init_col(BLOCK_SIZE=4, BLOCK_INTV=4)
 display4.init_row(X_ORG=2, Y_ORG=70, COL_INTV=6)
 
 
