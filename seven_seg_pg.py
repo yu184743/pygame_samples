@@ -21,13 +21,13 @@ from pygame.locals import Rect
 # 0   * D D       D0(1,0)  D1(2,0)
 # x:  0 1 2 3
 
-offset_A = ((1,6), (2,6))
-offset_B = ((3,4), (3,5))
-offset_C = ((3,1), (3,2))
-offset_D = ((1,0), (2,0))
-offset_E = ((0,1), (0,2))
-offset_F = ((0,4), (0,5))
-offset_G = ((1,3), (2,3))
+offset_A = ((1, 6), (2, 6))
+offset_B = ((3, 4), (3, 5))
+offset_C = ((3, 1), (3, 2))
+offset_D = ((1, 0), (2, 0))
+offset_E = ((0, 1), (0, 2))
+offset_F = ((0, 4), (0, 5))
+offset_G = ((1, 3), (2, 3))
 
 # 表示する数字／記号のon/off情報
 # セグメントAからGについて7種類、「タプル」で用意する。
@@ -58,7 +58,7 @@ WHITE = (250, 250, 250)
 
 class Seven_seg():
     def __init__(self, screen):
-        self.screen = screen    
+        self.screen = screen
 
     def init_col(self, BLOCK_SIZE=3, BLOCK_INTV=4, COLOR_ON=WHITE, COLOR_OFF=GRAY):
         # ひと桁、コラムの設定
@@ -75,7 +75,7 @@ class Seven_seg():
         self.X_ORG = X_ORG * self.BLOCK_INTV
         self.Y_ORG = Y_ORG * self.BLOCK_INTV
         # 各桁のブロック間隔をブロック数で指定（インターバル）
-        self.COL_INTV = COL_INTV * self.BLOCK_INTV 
+        self.COL_INTV = COL_INTV * self.BLOCK_INTV
 
     def update_col(self, col=0, num=3, base=16, blank=False):  # ある桁にある数字を表示する関数
         # numをcol桁目に表示、桁は最上位桁の左から右へ進む。

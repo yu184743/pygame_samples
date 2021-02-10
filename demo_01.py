@@ -28,7 +28,7 @@ while running:
     color_off = (120, 120, 120)
     for x0 in range(5):
         for y0 in range(7):
-    #        pygame.draw.circle(screen, color_off, (24 + x0 * 16, 24 + y0 * 16), 8)
+            # pygame.draw.circle(screen, color_off, (24 + x0 * 16, 24 + y0 * 16), 8)
             pygame.draw.rect(screen, color_off, Rect(24 + x0 * 16, 24 + y0 * 16, 12, 12))
 
     # pygame.draw.circle(screen, color_on, (24 + x1 * 16, 24 + y1 * 16), 8)

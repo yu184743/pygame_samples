@@ -12,13 +12,13 @@ pygame.display.set_caption('font demo')
 large_text = pygame.font.Font('fonts/hack-fonts/Hack-Regular.ttf', 36)
 small_text = pygame.font.Font('fonts/hack-fonts/Hack-Bold.ttf', 24)
 
-running =  True
+running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-    screen.fill((250,180,250))
+    screen.fill((250, 180, 250))
     text_surface = large_text.render('hello world!', True, (0, 0, 0))
     screen.blit(text_surface, (20, 12))
 
@@ -28,4 +28,3 @@ while running:
     pygame.display.flip()
 
 pygame.quit()
-

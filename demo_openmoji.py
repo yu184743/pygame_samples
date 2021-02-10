@@ -8,7 +8,8 @@
 
 import pygame
 import pygame.freetype
-import time
+
+# import time
 
 
 DARK_GRAY = (40, 40, 40)
@@ -24,12 +25,12 @@ WINDOW_HEIGHT = 480
 
 pygame.init()
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-pygame.display.set_caption('openmoji')
+pygame.display.set_caption("openmoji")
 
 clock = pygame.time.Clock()
 
-font1 = pygame.freetype.Font('fonts/OpenMoji-Color.ttf', 96)
-font2 = pygame.freetype.Font('fonts/natumemozi.ttf', 24)
+font1 = pygame.freetype.Font("fonts/OpenMoji-Color.ttf", 96)
+font2 = pygame.freetype.Font("fonts/natumemozi.ttf", 24)
 
 # message1 = ""
 # for i in range(0x1F9E0, 0x1F9FF):
@@ -37,6 +38,7 @@ font2 = pygame.freetype.Font('fonts/natumemozi.ttf', 24)
 # print(message1)
 
 TOP_CODE_POINT = 0x1F3A0
+
 
 def emoji_display(x, y):
     code_point = TOP_CODE_POINT + int(y / 16) * 8 + int(x / 16)
@@ -48,9 +50,10 @@ def emoji_display(x, y):
     rect2.center = (WINDOW_WIDTH / 2, y + 40)
     screen.blit(text2, rect2)
 
+
 def infinite_loop():
-    x = (WINDOW_WIDTH * 0.5)
-    y = (WINDOW_HEIGHT * 0.5)
+    x = WINDOW_WIDTH * 0.5
+    y = WINDOW_HEIGHT * 0.5
 
     x_change = 0
     y_change = 0
@@ -71,7 +74,12 @@ def infinite_loop():
                     y_change = 1
 
             if event.type == pygame.KEYUP:
-                if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT or event.key == pygame.K_UP or event.key == pygame.K_DOWN:
+                if (
+                    event.key == pygame.K_LEFT
+                    or event.key == pygame.K_RIGHT
+                    or event.key == pygame.K_UP
+                    or event.key == pygame.K_DOWN
+                ):
                     x_change = 0
                     y_change = 0
 
@@ -88,10 +96,11 @@ def infinite_loop():
             y = 0
 
         screen.fill(WHITE)
-        emoji_display(x,y)            
-        
+        emoji_display(x, y)
+
         pygame.display.update()
         clock.tick(60)
+
 
 infinite_loop()
 pygame.quit()

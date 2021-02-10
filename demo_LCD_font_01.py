@@ -3,7 +3,7 @@
 
 import pygame
 import pygame.freetype
-import time
+# import time
 from lcd_font_pg import LCD_font
 
 DARK_GRAY = (40, 40, 40)
@@ -19,11 +19,11 @@ WINDOW_HEIGHT = 240
 
 pygame.init()
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-pygame.display.set_caption('LCD font')
+pygame.display.set_caption("LCD font")
 
 clock = pygame.time.Clock()
 
-font1 = pygame.freetype.Font('fonts/natumemozi.ttf', 48)
+font1 = pygame.freetype.Font("fonts/natumemozi.ttf", 48)
 
 lcd1 = LCD_font(screen)
 lcd1.init_col(BLOCK_SIZE=7, BLOCK_INTV=8, COLOR_ON=GREEN, COLOR_OFF=GRAY)
@@ -40,8 +40,8 @@ def LCD_display(x, y):
 
 
 def infinite_loop():
-    x = (WINDOW_WIDTH * 0.5)
-    y = (WINDOW_HEIGHT * 0.5)
+    x = WINDOW_WIDTH * 0.5
+    y = WINDOW_HEIGHT * 0.5
 
     x_change = 0
     y_change = 0
@@ -62,7 +62,12 @@ def infinite_loop():
                     y_change = 1
 
             if event.type == pygame.KEYUP:
-                if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT or event.key == pygame.K_UP or event.key == pygame.K_DOWN:
+                if (
+                    event.key == pygame.K_LEFT
+                    or event.key == pygame.K_RIGHT
+                    or event.key == pygame.K_UP
+                    or event.key == pygame.K_DOWN
+                ):
                     x_change = 0
                     y_change = 0
 
@@ -79,10 +84,11 @@ def infinite_loop():
             y = 0
 
         screen.fill(GRAY)
-        LCD_display(x,y)            
-        
+        LCD_display(x, y)
+
         pygame.display.update()
         clock.tick(60)
+
 
 infinite_loop()
 pygame.quit()

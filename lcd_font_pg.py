@@ -1,34 +1,34 @@
 # handmade LCD font for pygame
 # 5x7ドットマトリクス
 
-from math import log
+# from math import log
 import pygame
 from pygame.locals import Rect
 
 
-LCD_0 =    (0, 1, 1, 1, 0,
-            1, 0, 0, 0, 1,
-            1, 0, 0, 1, 1,
-            1, 0, 1, 0, 1,
-            1, 1, 0, 0, 1,
-            1, 0, 0, 0, 1,
-            0, 1, 1, 1, 0)
+LCD_0 = (0, 1, 1, 1, 0,
+         1, 0, 0, 0, 1,
+         1, 0, 0, 1, 1,
+         1, 0, 1, 0, 1,
+         1, 1, 0, 0, 1,
+         1, 0, 0, 0, 1,
+         0, 1, 1, 1, 0)
 
-LCD_1 =    (0, 0, 1, 0, 0,
-            0, 1, 1, 0, 0,
-            0, 0, 1, 0, 0,
-            0, 0, 1, 0, 0,
-            0, 0, 1, 0, 0,
-            0, 0, 1, 0, 0,
-            0, 1, 1, 1, 0)
+LCD_1 = (0, 0, 1, 0, 0,
+         0, 1, 1, 0, 0,
+         0, 0, 1, 0, 0,
+         0, 0, 1, 0, 0,
+         0, 0, 1, 0, 0,
+         0, 0, 1, 0, 0,
+         0, 1, 1, 1, 0)
 
-LCD_2 =    (0, 1, 1, 1, 0,
-            1, 0, 0, 0, 1,
-            0, 0, 0, 0, 1,
-            0, 0, 0, 1, 0,
-            0, 0, 1, 0, 0,
-            0, 1, 0, 0, 0,
-            1, 1, 1, 1, 1)
+LCD_2 = (0, 1, 1, 1, 0,
+         1, 0, 0, 0, 1,
+         0, 0, 0, 0, 1,
+         0, 0, 0, 1, 0,
+         0, 0, 1, 0, 0,
+         0, 1, 0, 0, 0,
+         1, 1, 1, 1, 1)
 
 LCD_font_styles = (LCD_0, LCD_1, LCD_2)
 
@@ -39,9 +39,10 @@ GREEN = (10, 250, 10)
 YELLOW = (250, 250, 20)
 WHITE = (250, 250, 250)
 
+
 class LCD_font():
     def __init__(self, screen):
-        self.screen = screen    
+        self.screen = screen
 
     def init_col(self, BLOCK_SIZE=4, BLOCK_INTV=4, COLOR_ON=WHITE, COLOR_OFF=GRAY):
         # ひと桁、コラムの設定
@@ -57,7 +58,7 @@ class LCD_font():
         self.X_ORG = X_ORG * self.BLOCK_INTV
         self.Y_ORG = Y_ORG * self.BLOCK_INTV
         # 各桁のブロック間隔をブロック数で指定（インターバル）
-        self.COL_INTV = COL_INTV * self.BLOCK_INTV 
+        self.COL_INTV = COL_INTV * self.BLOCK_INTV
 
     def update_col(self, col=0, code=2):  # ある桁にある文字を表示する関数
         # codeの文字をcol桁目に表示、桁は最上位桁の左から右へ進む。
@@ -77,4 +78,3 @@ class LCD_font():
                 # ドットを描く
                 pygame.draw.rect(self.screen, color, Rect(org1[0], org1[1], block_size, block_size))
                 i += 1
-

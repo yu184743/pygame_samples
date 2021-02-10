@@ -32,7 +32,7 @@ pygame.display.set_caption('freetype demo')
 font1 = pygame.freetype.Font('fonts/natumemozi.ttf', 18)
 font2 = pygame.freetype.Font('fonts/hack-fonts/Hack-Bold.ttf', 24)
 
-screen.fill((250,180,250))
+screen.fill((250, 180, 250))
 message1 = 'こんにちは、私の名前はナツメです。'
 
 
@@ -52,7 +52,7 @@ font2.render_to(screen, (20, 48), 'How are you today?', (0, 0, 0))
 pygame.display.flip()
 
 # 何もしない無限ループ。ctrl-cやウィンドウを閉じたときの終了処理のみ。
-running =  True
+running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
