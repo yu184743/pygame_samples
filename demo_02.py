@@ -49,21 +49,20 @@ while running:
             break
         # 「for count」のループから抜ける。whileループも抜ける。
 
-        display1.update_col(col=0, num=count // (16 ** 3)) # 4096の位
-        display1.update_col(col=1, num=count // (16 ** 2)) # 256の位
-        display1.update_col(col=2, num=count // 16)  # 16の位
-        display1.update_col(col=3, num=count)   # 1の位
-    
-        display2.update_col(col=0, num=count // (10 ** 4), base=10) # 1000の位
-        display2.update_col(col=1, num=count // (10 ** 3), base=10) # 1000の位
-        display2.update_col(col=2, num=count // (10 ** 2), base=10) # 100の位
-        display2.update_col(col=3, num=count // (10 ** 1), base=10) # 10の位
-        display2.update_col(col=4, num=count // (10 ** 0), base=10) # 1の位
+        display1.update_col(col=0, num=count // (16 ** 3))   # 4096の位
+        display1.update_col(col=1, num=count // (16 ** 2))   # 256の位
+        display1.update_col(col=2, num=count // 16)          # 16の位
+        display1.update_col(col=3, num=count)                # 1の位
+
+        display2.update_col(col=0, num=count // (10 ** 4), base=10)   # 1000の位
+        display2.update_col(col=1, num=count // (10 ** 3), base=10)   # 1000の位
+        display2.update_col(col=2, num=count // (10 ** 2), base=10)   # 100の位
+        display2.update_col(col=3, num=count // (10 ** 1), base=10)   # 10の位
+        display2.update_col(col=4, num=count // (10 ** 0), base=10)   # 1の位
 
         display3.disp_num2(zfil=False, rjust=3, num=count, base=10)
 
         display4.disp_num2(zfil=True, rjust=16, num=count, base=2)
-
 
         pygame.display.flip()  # update_col
         clock.tick(20)  # FPS, Frame Per Second
