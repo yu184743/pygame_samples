@@ -17,7 +17,9 @@ demo1
 
 ![image](https://github.com/yu184743/pygame_samples/assets/96573503/3bfb07dd-15fc-4d6c-8205-5a9e34f5409a)
 
-https://github.com/yu184743/pygame_samples/assets/96573503/fd8debad-93a0-46cd-90e0-2e9456b143ec
+
+https://github.com/yu184743/pygame_samples/assets/96573503/55448479-1e05-4d82-9e25-d1e0b3a20bc9
+
 
 demo2
 
