@@ -1,4 +1,18 @@
-ss+動画
+# pygame_samples
+
+ - demo_01.py: pygameの超簡単なデモ。 test yeah.
+ - demo_02.py: 7セグのシミュレーション、各セグメントを2ブロックで構成。Seven_segクラス使用。
+ - demo_LCD_font_01.py: 5x7のLCDフォント制作用。LCD_fontクラス使用。
+ - demo_LCD_font.py: 5x7のLCDフォント、完成版。
+ - demo_freetype.py: pygame.freetypeでテキスト表示。（新しい方式）
+ - demo_freetype.py: pygame.fontでテキスト表示。（古い方式）
+ - demo_openmoji.py: オープンソースの絵文字、openmojiのデモ。キー操作のデモ。
+ - seven_seg_pg.py: Seven_segクラス
+ - lcd_font_pg.py: LCD_fontクラス
+
+ss + 動画
+
+
 demo1
 ![image](https://github.com/yu184743/pygame_samples/assets/96573503/3bfb07dd-15fc-4d6c-8205-5a9e34f5409a)
 
