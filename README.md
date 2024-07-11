@@ -66,6 +66,11 @@ demo_lcd_font
 ![image](https://github.com/yu184743/pygame_samples/assets/96573503/9e229aec-61f4-4eb5-b4bb-58a5812ecf0d)
 
 
+
+https://github.com/yu184743/pygame_samples/assets/96573503/8e604700-7af3-4eb4-92db-803914498ead
+
+
+
 openemoji
 
 
