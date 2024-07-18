@@ -87,7 +87,8 @@ LCD_9 = (0, 0, 1, 1, 0,
          0, 0, 0, 1, 0,
          0, 0, 1, 0, 0)
 
-LCD_font_styles = (LCD_0, LCD_1, LCD_2, LCD_3, LCD_4, LCD_5, LCD_6, LCD_7, LCD_8, LCD_9)
+with open("fonts/4x7_number.txt",encoding="utf-8") as f:
+    LCD_font_styles = (f.read().split('\n'))
 
 DARK_GRAY = (40, 40, 40)
 GRAY = (80, 80, 80)
@@ -123,7 +124,7 @@ class LCD_font():
         i = 0
         for y in range(7):
             for x in range(5):
-                if LCD_font_styles[int(code)][i] == 1:
+                if LCD_font_styles[code *7 + y][x] == "1":
                     color = self.COLOR_ON
                 else:
                     color = self.COLOR_OFF
