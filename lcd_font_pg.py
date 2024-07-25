@@ -87,6 +87,7 @@ LCD_9 = (0, 0, 1, 1, 0,
          0, 0, 0, 1, 0,
          0, 0, 1, 0, 0)
 
+# フォントのよみこみ
 with open("fonts/4x7_number.txt",encoding="utf-8") as f:
     LCD_font_styles = (f.read().split('\n'))
 
