@@ -14,8 +14,8 @@ CYAN = (120, 120, 250)
 YELLOW = (250, 250, 20)
 WHITE = (250, 250, 250)
 
-WINDOW_WIDTH = 320
-WINDOW_HEIGHT = 240
+WINDOW_WIDTH = 480
+WINDOW_HEIGHT = 360
 
 pygame.init()
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
@@ -27,7 +27,7 @@ font1 = pygame.freetype.Font("fonts/natumemozi.ttf", 48)
 
 lcd1 = LCD_font(screen)
 lcd1.init_col(BLOCK_SIZE=7, BLOCK_INTV=8, COLOR_ON=GREEN, COLOR_OFF=GRAY)
-lcd1.init_row(X_ORG=8, Y_ORG=8, COL_INTV=6)
+lcd1.init_row(X_ORG=8, Y_ORG=8, COL_INTV=2)
 
 
 def LCD_display(x, y):

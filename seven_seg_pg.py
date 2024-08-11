@@ -45,6 +45,7 @@ seg_G = (0, 0, 1, 1,   1, 1, 1, 0,   1, 1, 1, 1,   0, 1, 1, 1,  offset_G, "G")
 # print(seg_A[3])
 
 # さらに、タプルのタプルを作る。
+
 segments = (seg_A, seg_B, seg_C, seg_D, seg_E, seg_F, seg_G)
 
 # 色の準備。R, G, Bを0から255で指定。
@@ -54,6 +55,7 @@ RED = (255, 0, 0)
 GREEN = (10, 250, 10)
 YELLOW = (250, 250, 20)
 WHITE = (250, 250, 250)
+BRACK = (0, 0, 0,)
 
 
 class Seven_seg():
