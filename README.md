@@ -39,6 +39,14 @@ demo2
 https://github.com/yu184743/pygame_samples/assets/96573503/5e26175f-8d4d-41b6-9a14-c74b49631242
 
 
+demo3
+
+
+
+https://github.com/user-attachments/assets/5706862b-dabd-4f09-821b-f61f84711d25
+
+
+
 carcrash
 
 
