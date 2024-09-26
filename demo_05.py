@@ -65,16 +65,16 @@ while running:
         displaytime.update_col(col=6, code=dt_now.second // 10)
         displaytime.update_col(col=7, code=dt_now.second %10)
 
-        displaydate.update_col(col=0, code=int(str(dt_now.year)[0])) 
-        displaydate.update_col(col=1, code=int(str(dt_now.year)[1]))
-        displaydate.update_col(col=2, code=int(str(dt_now.year)[2]))   
-        displaydate.update_col(col=3, code=int(str(dt_now.year)[3]))    
-        displaydate.update_col(col=4, code=11)
-        displaydate.update_col(col=5, code=dt_now.month // 10)
-        displaydate.update_col(col=6, code=dt_now.month % 10)
-        displaydate.update_col(col=7, code=11) 
-        displaydate.update_col(col=8, code=dt_now.day // 10)
-        displaydate.update_col(col=9, code=dt_now.day % 10)  
+        #displaydate.update_col(col=0, code=int(str(dt_now.year)[0])) 
+        #displaydate.update_col(col=1, code=int(str(dt_now.year)[1]))
+        #displaydate.update_col(col=2, code=int(str(dt_now.year)[2]))   
+        #displaydate.update_col(col=3, code=int(str(dt_now.year)[3]))    
+        #displaydate.update_col(col=4, code=11)
+        #displaydate.update_col(col=5, code=dt_now.month // 10)
+        #displaydate.update_col(col=6, code=dt_now.month % 10)
+        #displaydate.update_col(col=7, code=11) 
+        #displaydate.update_col(col=8, code=dt_now.day // 10)
+        #displaydate.update_col(col=9, code=dt_now.day % 10)  
 
         pygame.display.flip()  # update_col
         clock.tick(20)  # FPS, Frame Per Second

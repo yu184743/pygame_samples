@@ -4,10 +4,7 @@
 # from math import log
 import pygame
 from pygame.locals import Rect
-from mcje.minecraft import Minecraft
-import param_MCJE1122 as param
-mc = Minecraft.create(port=param.PORT_MC)
-mc.postToChat('create clock')
+
 
 LCD_0 = (0, 0, 1, 1, 0,
          0, 1, 0, 0, 1,
@@ -101,10 +98,13 @@ GREEN = (10, 250, 10)
 YELLOW = (250, 250, 20)
 WHITE = (250, 250, 250)
 
+from mcje.minecraft import Minecraft
+import param_MCJE1122 as param
+mc = Minecraft.create(port=param.PORT_MC)
 
 class LCD_font():
     def __init__(self, mc):
-        self.mc = mc
+        self.screen = mc
 
     def init_col(self, BLOCK_SIZE=4, BLOCK_INTV=4, COLOR_ON=WHITE, COLOR_OFF=GRAY):
         # ひと桁、コラムの設定
@@ -112,8 +112,8 @@ class LCD_font():
         self.BLOCK_SIZE = BLOCK_SIZE
         self.BLOCK_INTV = BLOCK_INTV
         # on/offのカラー
-        self.COLOR_ON = COLOR_ON
-        self.COLOR_OFF = COLOR_OFF
+        self.COLOR_ON = param.DIAMOND_BLOCK
+        self.COLOR_OFF = param.AIR
 
     def init_row(self, X_ORG=2, Y_ORG=8, COL_INTV=6):  # 表示行の設定
         # xy空間での7セグ表示、最上位桁の左下座標をブロック数で指定
@@ -138,5 +138,6 @@ class LCD_font():
                 # ドットの原点座標
                 org1 = (x0 + x * self.BLOCK_INTV, y0 + y * self.BLOCK_INTV)
                 # ドットを描く
-                mc.setBlock(5, 5, 5, param.DIAMOND_BLOCK) # z=定数
+                # pygame.draw.rect(self.screen, color, Rect(org1[0], org1[1], block_size, block_size))
+                mc.setBlock(x+(5*col), 80-y, -10, color)
                 i += 1
