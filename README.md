@@ -50,6 +50,13 @@ demo4
 
 ![image](https://github.com/user-attachments/assets/9d80471f-b0ac-418a-97f3-bcd0d91863c3)
 
+demo5 clock
+
+
+
+https://github.com/user-attachments/assets/d23283c1-0d01-4877-8611-c695fcb013ef
+
+
 
 carcrash
 
